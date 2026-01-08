@@ -1,0 +1,72 @@
+{
+  "name": "@superinstance/hardware-capability-profiler",
+  "version": "1.0.0",
+  "description": "Comprehensive browser hardware profiling for AI-powered applications. Detect GPU, CPU, RAM, storage, and calculate JEPA capability scores.",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "docs"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "type-check": "tsc --noEmit",
+    "prepublishOnly": "npm run build && npm run test",
+    "lint": "eslint src --ext .ts",
+    "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\""
+  },
+  "keywords": [
+    "hardware",
+    "detection",
+    "profiling",
+    "webgpu",
+    "ai",
+    "capabilities",
+    "jepa",
+    "gpu",
+    "cpu",
+    "browser",
+    "performance",
+    "hardware-detection",
+    "capability-detection",
+    "webgl",
+    "webassembly"
+  ],
+  "author": "SuperInstance",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SuperInstance/hardware-capability-profiler"
+  },
+  "bugs": {
+    "url": "https://github.com/SuperInstance/hardware-capability-profiler/issues"
+  },
+  "homepage": "https://github.com/SuperInstance/hardware-capability-profiler#readme",
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@typescript-eslint/eslint-plugin": "^6.13.0",
+    "@typescript-eslint/parser": "^6.13.0",
+    "@vitest/coverage-v8": "^1.0.0",
+    "eslint": "^8.54.0",
+    "prettier": "^3.1.0",
+    "typescript": "^5.3.0",
+    "vitest": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
